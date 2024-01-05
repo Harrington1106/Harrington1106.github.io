@@ -17,7 +17,7 @@
 
 
 
-<title>武汉大学三行情诗冠军作品 | Serendipity</title>
+<title>diary-3 | Serendipity</title>
 
 
 
@@ -131,11 +131,76 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">武汉大学三行情诗冠军作品</h1>
+            <h1 class="post-title">diary-3</h1>
             
                 <div class="post-meta">
                     
@@ -144,14 +209,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 5, 2024&nbsp;&nbsp;15:09:05</a>
+                        Date: <a href="#">January 5, 2024&nbsp;&nbsp;23:22:14</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E7%9F%AD%E6%96%87%E5%88%86%E4%BA%AB/">短文分享</a>
+                                <a href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
                             
                         </span>
                     
@@ -160,10 +225,13 @@
         </header>
 
         <div class="post-content">
-            <blockquote>
-<p>螃蟹在剥我的壳，笔记本在写我，漫天的我落在枫叶上雪花上，而你在想我。</p>
+            <h3 id="post-1"><a href="#post-1" class="headerlink" title="post-1"></a>post-1</h3><p>我是很喜欢下载软件的人，但是又经常把下载的软件扔在一边再也没有点过。（不完全统计除了系统自带的，手机里的软件大概有超过三百个吧）<br>仔细想想，手机里常用的软件其实就那么几个，日常通讯消费的qq微信支付宝，娱乐看漫画看电影刷视频的一些，再加上学校要求的。<br>这么看来，必要性软件其实不多，包括游戏其实我也很少打开。<br>大部分软件完全是在占储存空间，但是由于手机内存有1T所以说这些软件占的空间好像也只是冰山一角，可能这是我肆无忌惮的原因之一吧。<br>其中的另外一个原因或许是这些下载的软件是真的做到了小而美，清清爽爽做到了工具应该有的样子。<br>虽然有的也会有广告，配合上去广告的模块可以说是非常香的了。</p>
+<h3 id="post-2"><a href="#post-2" class="headerlink" title="post-2"></a>post-2</h3><p>听到了一句符合我想法的话：</p>
+<blockquote>
+<p>“往哪走都是向前走”<br>能活着就行，去哪里都无所谓。<br>如果有能力让世界上的一个人消失并且所有人都不记得他的存在，会选谁？在思考了五秒钟之后也算是斩钉截铁地选择了自己。<br>（不过在写这段的时候我还是觉得该死的另有其人）</p>
 </blockquote>
-<p>这句话有三层意思。<br>第一层，螃蟹不可能在剥我的壳，笔记本不可能在写我，我不可能落在枫叶上雪花上，而你不可能在想我。<br>第二层，是我在剥螃蟹的壳，是我在写笔记本，是枫叶和雪花落在我身上，是我在想你。<br>第三层，除非世界颠倒你才会爱上我。</p>
+<h3 id="post-3"><a href="#post-3" class="headerlink" title="post-3"></a>post-3</h3><p>手机的壁纸最近都是纯白的，大概是想清楚了打开桌面的重点是应用吧，绚丽的壁纸只会喧宾夺主。<br>毕竟用了太绚丽的壁纸的话，就更找不到我的软件在哪了呜呜呜。<br>不过最近也想换换口味了，简约又能突出重点的就更好了。</p>
+<p>以后的日记大概也是这种片段式的了，有时间的时候就会变成长文式的。</p>
 
         </div>
 
@@ -178,7 +246,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2024/01/05/poem-1/">http://example.com/2024/01/05/poem-1/</a></span>
+                        <span><a href="http://example.com/2024/01/05/diary-3/">http://example.com/2024/01/05/diary-3/</a></span>
                     </p>
                 
                 
@@ -202,7 +270,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E6%83%85%E4%B9%A6/"># 情书</a>
+                        <a href="/tags/%E6%97%A5%E8%AE%B0/"># 日记</a>
                     
                         
                 </span>
@@ -215,10 +283,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/01/05/diary-3/">diary-3</a>
             
-            
-            <a class="next" rel="next" href="/2024/01/01/diary-2/">diary-2</a>
+            <a class="next" rel="next" href="/2024/01/05/poem-1/">武汉大学三行情诗冠军作品</a>
             
         </section>
 
