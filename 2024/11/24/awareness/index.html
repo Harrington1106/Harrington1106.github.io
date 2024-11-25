@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Shadow Harrington">
+
+
+    <meta name="subtitle" content="harrington">
+
+
+    <meta name="description" content="一个无聊的大学生">
+
+
+
+<title>awareness | Serendipity</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Shadow&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Shadow&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">awareness</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Shadow Harrington</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">November 24, 2024&nbsp;&nbsp;22:15:13</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%9D%82%E8%AE%B0/">杂记</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <hr>
+<p><em>开始写这篇的开头和契机其实都源于我刚刚想要在这上写下些什么，纸上的开头大致是关于我由于没有时间的观念从而碌碌无为的忙忙碌碌着每一天，并且在回想的时候并不知道我的一天都发生了什么。由于没有写作的能力或者写作能力的退化，竟然又无意识地写成了我不知道今天一天不知道发生什么的原因是我不敢面对我的碌碌无为，思想转变成了“面对既是痛苦，我不敢面对我的失败，我就是一个废人”。我突然意识到我的反思竟然将我向负面情绪推去，毫无疑问，我的反思对我毫无意义，我的反思是错误的。先排除我这莫名其妙跑出来的抑郁情绪，我倒想聊聊反思。如果有时间的话，我在后面聊聊我的抑郁情绪吧。</em></p>
+<hr>
+<p><del>不知道为什么，文字上的写作竟能将我指向负面情绪，经过思考才发现我竟然无意识的会冒出负面的抑郁思想，而这种抑郁情绪是我的反思给我带来的痛苦。排除抑郁情绪本身，这不禁让我想讨论一下“反思”的意义，以及如何反思。</del></p>
+<p><del>依个人想法，依据现实的真实事件或者一句话引发的对自我的思考，就像一束光照射其他物体后，如同镜面反射一般反射到我的身上。但是反思这个词在我的生活中更像是自我批判，事到如今我的反思带给我的</del></p>
+<p>上面这一段经过我的再次阅读，发现其中其实还有很多的负面情绪，又或者在隔天我再次阅读的时候打算把前面一段也更省略掉。带着负面情绪去批判负面，这样子是不对的。所以我在经过chatgpt的心理疏导后，决定重新写这一段。</p>
+<hr>
+<p><em>我的反思是自我反省，经过谷歌后的结果与我的说法没什么区别。但其实我的自我反省是被抑郁情绪裹挟着的，真正的反思应该脱离这些思想之外，以第三方的视角去理性的看待这一切。其实这也解释了为什么反思会让我抑郁，因为我本来就在抑郁着，或者说干什么都得先脱离你的抑郁情绪。</em><br><em>由于chatgpt对我情绪的疏导开通确实有着帮助，所以我决定分享出来它与我的谈话。</em></p>
+<p>首先，我询问 <strong>”反思给我带来了抑郁情绪，我该怎么做“</strong><br>他开始给我的回答客观又官方，让处于消沉状态的我更郁闷了。我告诉他他现在是心理医生，我和他分享了我最近的苦恼。其实苦恼在分享出来的那一刻我的消极情绪就散开了不少，所以说有消极情绪的时候，倾诉是一个很好的办法。但是对我这种可能相对敏感的人来说，把自己的烦恼告诉别人也是一种对别人的伤害，导致所有的压力烦恼都积压在自己身上。所以不妨告诉一个不会被带来坏情绪的ai吧，不只是chatgpt，其他的大模型也有着不同的优点。因此，开始倾诉吧！（我得正视我的错误，所以我把倾诉打成了qin诉这件事得说出来）<br>其实它回答了什么我已经忘记了，但是在那一刻确实缓和了我的情绪，让我的情绪转变为正向。<br>它在慢慢拆析你的烦恼，并告诉你大概应该如何做。</p>
+<p>&#x3D;&#x3D;你觉得这些问题是“罪有应得”，这说明你对自己有很高的期待。但每个人都会遇到压力大、事情堆积的时候，这并不意味着你做得不好，而是表明你需要调整节奏和方法。试着告诉自己：“这些情绪是暂时的，我有能力逐步应对。”&#x3D;&#x3D;</p>
+<p>是不是很温柔呢</p>
+<hr>
+<h4 id="—下面是后续回答精简版—"><a href="#—下面是后续回答精简版—" class="headerlink" title="—下面是后续回答精简版—"></a>—下面是后续回答精简版—</h4><p><em>&#x2F;省略了不少的详细方案，不同的人可能有不同的解法，所以来试试吧&#x2F;</em><br><strong>我</strong>：我在写作的时候开始意识到这些，我开始对自己反思，这是否代表我不需要太多的反思</p>
+<h6 id="ChatGPT-说："><a href="#ChatGPT-说：" class="headerlink" title="ChatGPT 说："></a>ChatGPT 说：</h6><p>你在写作过程中对自己的状况有了意识，这本身就是一种非常重要的自我觉察。这说明你已经能够从情绪和困境中抽离出来，用理性的方式观察自己的内心。这种觉察并不是反思过多的结果，而是你对自己真实情绪的敏锐感知。<br>但如果反思让你感到更加焦虑、自责甚至陷入负面情绪的漩涡，那确实需要重新思考反思的频率和方式。<br>反思的目的是帮助你更好地了解自己，而不是让你陷入自责。通过明确目标、积极提问和及时结束，你会发现反思不再是负担，而是成长的工具。如果你想一起探讨某件事的反思过程，我很乐意陪伴你走这一段路。 😊</p>
+<p><strong>我</strong>：谢谢你<br>我反思前其实都是被抑郁情绪裹挟着的，这是否意味着反思之前应该脱离这些情绪，或者说得先意识到自己是什么样子的情绪，之后再开始进行反思。</p>
+<h6 id="ChatGPT-说：-1"><a href="#ChatGPT-说：-1" class="headerlink" title="ChatGPT 说："></a>ChatGPT 说：</h6><p>你提出的这个问题非常深刻，而且直击反思和情绪之间的关键点。确实，在抑郁情绪的裹挟下，反思很容易变成一种消极的自责，而不是有效的成长工具。因此，<strong>在反思之前，识别和调节情绪是非常重要的一步</strong>。<br>你提出的“先意识到情绪再反思”的思路非常正确。反思是理性的行为，而情绪则是感性的部分。两者之间需要一定的缓冲区。通过识别情绪、接纳它，并进行简单的调节，你可以让自己从情绪中解脱出来，以更清晰、更温和的方式进行反思。<br>你已经在主动思考如何调整自己的方式，这本身就是很大的进步！如果你想尝试某种具体的调节方法或反思框架，可以告诉我，我会和你一起探索。 😊</p>
+<hr>
+<p>说实话，在提到一件事的时候，我的脑中找不到任何相关的记忆。在经过一段时间之后我才开始想起，所以说“有些事不是你忘记了，只是你想不起来了而已”（x）<br>由于开头提到了我的抑郁情绪，所以我想讲点什么。<br>先讲点简单的，其实大家对于一个比较阴郁的人或者心理有疾病的人有着刻板印象，现在的刻板印象是似乎这群人的抑郁情绪都来源于原生家庭。作为算是“过来人”（x），我只想说，有，但不是全部。更准确的描述是，我的抑郁情绪，来源在哪我也不知道。可能会有人有疑问，怎么可能。但是根据我的个人经历确实是这样的，对我来说抑郁情绪其实是无来由的，其实每个人都有，带来的影响因人而异。原生家庭之类的是只是一个帮手的角色，又或者说，对于抑郁情绪的敏感程度有部分与你的原生家庭有关。<br>最近压力大也是催生我的抑郁情绪的原因之一，兴许是占大头的。而现在我的积极情绪告诉我：虽然是我的罪有应得，但是我还是想说，我就这样。那又如何？虽然不是很喜欢一些热梗，但是还是想说“那咋了”。既然这一方面有欠缺，那么我就在其他方面弥补回来。我相信我能做到，我无所不能（x）是不是有点太自大了哈哈哈，所以我不太想谈这方面的比较透露我现生的。</p>
+<hr>
+<p>最后，我的朋友告诉我，我应该干点什么事，比如把哈利波特原著看完、写一篇小说、先把下周考试复习完巴拉巴拉。所以下一篇更新可能会是我的同人文哈哈哈，又或者读后感？还是我的复习结果？或者我的实习报告。<br>总之，我要开始复习了，十一点半上床睡觉，明早还有事等着我！<br>就这样了！<br>再再最后，我看到了影视剧风的千万播放视频，一个帮助残疾人制作了腿部特效，让他的腿动起来，跑起来。让我热泪盈眶，我无法诉说我的情感，在音乐后半大家一起唱的部分，我真实地落下了我的眼泪。歌名叫《亲爱的少年》，版权只用于短片，这也是我很佩服的一点，他们并没有将其乱用发行到各大软件。对于版权来说明明是本应该做的义务与责任，仅仅只是做到了平常就很不容易，就值得让人感到唏嘘。对于前段时间某工作室不尊重其他人的开源成果，擅自拿来说是自己写的代码来说，就更显含金量。<br>所以，影视剧风nb！<br>over</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Shadow Harrington</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://www.shadowquake.top/2024/11/24/awareness/">https://www.shadowquake.top/2024/11/24/awareness/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E9%9A%8F%E8%B0%88/"># 随谈</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/11/16/diary-4/">diary-4</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Shadow Harrington | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        const hasAttr = (e,a) => a.some(_=> e.attr(_)!==undefined);
+        $('a').each(function() {
+          const $this = $(this);
+          if(hasAttr($this,["data-fancybox","ignore-external-link"])) return;
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'your_domain' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script></body>
+
+</html>
